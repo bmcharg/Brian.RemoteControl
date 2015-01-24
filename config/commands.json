@@ -1,0 +1,15 @@
+{
+    "amplifier": {
+
+      "mute":            		"MO",
+      "unmute":            		"MF"
+
+    },
+
+    "sky": {
+
+      "mute":            		"MO",
+      "unmute":            		"MF"
+
+    }
+}
