@@ -3,15 +3,20 @@
   "version": "0.0.1",
   "description": "Brian's Remote Control Server",
   "main": "remote.js",
+  "private": true,
+  "scripts": {
+    "test": "NODE_ENV=development nodemon remote.js",
+    "start": "NODE_ENV=production node remote.js"
+  },
   "dependencies": {
     "body-parser": "^1.10.2",
     "colors": "^1.0.3",
     "express": "^4.11.1",
     "telnet-stream": "^0.0.4"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chunkgroup/Chunk.SpotAPI.git"
   },
   "author": "Brian McHarg",
   "license": "ISC"

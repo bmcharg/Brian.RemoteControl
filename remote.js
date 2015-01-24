@@ -3,6 +3,8 @@ var express = require('express')
 var bodyParser = require('body-parser');
 var colors = require('colors');
 
+var packageJSON = require('./package.json');
+
 var app = express();
 app.use(bodyParser.json());
 

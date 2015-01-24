@@ -4,16 +4,30 @@ module.exports = function(){
 	var tcp = {};
 
 
-	tcp.sendCommand = function(command){
+	tcp.sendCommand = function(command, res){
 
 		console.log("***" + config.AMP_PORT);
 
 		var client = new net.Socket();
-		client.connect(config.AMP_PORT, config.AMP_IP_ADDRESS, function() {
+		client.connect(command.port, command.ip, function() {
 
-		    console.log('CONNECTED TO: ' + config.AMP_IP_ADDRESS + ':' + config.AMP_PORT);
+		    console.log('CONNECTED TO: ' + command.ip + ':' + command.port);
 		    // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
-		    client.write(command + '\r\n');
+		    client.write(command.code + '\r\n');
+
+
+		    var response = {
+		    	"status": true,
+		    	"command": command.code,
+		    	"device": {
+		    		"name": command.device,
+		    		"ip": command.ip,
+		    		"port": command.port
+		    	}
+		    };
+
+			res.type("application/json");
+			res.send(response);
 
 		});
 

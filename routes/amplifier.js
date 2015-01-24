@@ -6,8 +6,23 @@ module.exports = function(){
 	var client = require('../server/tcp-client.js');
 	var commands = require('../config/commands.json');
 
-	app.param('command', function(req, res, next, command) {
-		req.command = commands.amplifier[command];
+	app.param('code', function(req, res, next, command){
+		req.command = {
+			device: "amplifier",
+			code: code,
+			ip: commands.amplifier.device.ip,
+			port: commands.amplifier.device.port
+		};
+		next();
+	});
+
+	app.param('command', function(req, res, next, command){
+		req.command = {
+			device: "amplifier",
+			code: commands.amplifier.commands[command],
+			ip: commands.amplifier.device.ip,
+			port: commands.amplifier.device.port
+		};
 		next();
 	});
 
@@ -18,11 +33,13 @@ module.exports = function(){
 
 
 	app.get('/command/:command', function (req, res){
-		client.sendCommand(req.command);
+		console.log("Sending command " + req.command);
+		client.sendCommand(req.command, res);
 	})
 
 	app.get('/code/:code', function (req, res){
-		client.sendCommand(req.code);
+		console.log("Sending code " + req.command);
+		client.sendCommand(req.command, res);
 	})
 
 

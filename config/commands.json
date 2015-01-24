@@ -1,8 +1,32 @@
 {
     "amplifier": {
 
-      "mute":            		"MO",
-      "unmute":            		"MF"
+      "device": {
+	      "ip":						"192.168.0.115",
+    	  "port":					23
+      },
+
+      "commands": {
+
+	      "mute":            		"MO",
+	      "unmute":            		"MF",
+	      "xbox360": 				"25FN",
+	      "appletv":				"04FN",
+	      "tv":						"05FN",
+	      "xboxone":				"15FN",
+	      "ps4":					"10FN",
+	      "hdmi5":					"23FN",
+	      "sonos":					"01FN",
+	      "radio":					"26FN",
+	      "ipod":					"17FN",
+	      "phono":					"00FN",
+	      "xbmc":					"24FN",
+	      "sky":					"06FN",
+
+	      "whatinput":				"?f"
+
+
+      }
 
     },
 
