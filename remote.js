@@ -15,6 +15,7 @@ config = require('./config/config.json')[process.env.NODE_ENV];
 // Routes
 app.use('/amp', require('./routes/amplifier'));
 app.use('/sky', require('./routes/sky'));
+app.use('/kodi', require('./routes/kodi'));
 
 // Configuration all done - start the server
 var server = app.listen(3000, function () {

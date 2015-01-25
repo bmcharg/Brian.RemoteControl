@@ -1,58 +1,49 @@
 {
-    "amplifier": {
-
-      "device": {
-	      "ip":						"192.168.0.115",
-    	  "port":					23
-
-      },
-
-      "commands": {
-
-
-
-      	  "on":						"PO",
-      	  "off":					"PF",
-
-	      "mute":            		"MO",
-	      "unmute":            		"MF",
-	      "xbox360": 				"25FN",
-	      "appleTV":				"04FN",
-	      "tv":						"05FN",
-	      "xboxOne":				"15FN",
-	      "ps4":					"10FN",
-	      "hdmi5":					"23FN",
-	      "sonos":					"01FN",
-	      "radio":					"26FN",
-	      "iPod":					"17FN",
-	      "phono":					"00FN",
-	      "kodi":					"24FN",
-	      "sky":					"06FN",
-
-	      "whatinput":				"?f"
-
-      },
-
-      "requests": {
-
-      	"power":					"?P",
-      	"input":					"?F",
-      	"volume": 					"?V"
-
-      }
-
+  "amplifier": {
+    "device": {
+      "ip": "192.168.0.115",
+      "port": 23
     },
-
-    "tv": {
-
-    	"TODO":						"http://support.betaalbare-domotica.eu/creating-a-remote-control-for-samsung-smart-tv/"
-
+    "commands": {
+      "on": "PO",
+      "off": "PF",
+      "mute": "MO",
+      "unmute": "MF",
+      "xbox360": "25FN",
+      "appleTV": "04FN",
+      "tv": "05FN",
+      "xboxOne": "15FN",
+      "ps4": "10FN",
+      "hdmi5": "23FN",
+      "sonos": "01FN",
+      "radio": "26FN",
+      "iPod": "17FN",
+      "phono": "00FN",
+      "kodi": "24FN",
+      "sky": "06FN",
+      "whatinput": "?f"
     },
-
-    "sky": {
-
-      "mute":            		"MO",
-      "unmute":            		"MF"
-
+    "requests": {
+      "power": "?P",
+      "input": "?F",
+      "volume": "?V"
     }
+  },
+  "tv": {
+    "TODO": "http://support.betaalbare-domotica.eu/creating-a-remote-control-for-samsung-smart-tv/"
+  },
+  "sky": {
+    "mute": "MO",
+    "unmute": "MF"
+  },
+  "kodi": {
+    "device": {
+      "ip": "192.168.0.115",
+      "port": 23
+    },
+    "commands": {
+      "Input.Up": 728280701,
+      "unmute": "MF"
+    }
+  }
 }

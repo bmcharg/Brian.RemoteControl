@@ -3,7 +3,7 @@ module.exports = function(){
 	var express = require('express');
 	var app = express();
 
-	var client = require('../server/tcp-client.js');
+	var client = require('../server/soap-client.js');
 	var commands = require('../config/commands.json');
 
 var http = require('http');
@@ -27,10 +27,10 @@ var url = require('url');
 			header : '"urn:schemas-nds-com:service:SkyPlay:2#SetAVTransportURI"',
 			getBody : function(channel) {
 
-return 	'<?xml version="1.0" encoding="utf-8"?>' +
-		'<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">' + 
-    	'<s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-nds-com:service:SkyPlay:2"><InstanceID>0</InstanceID><CurrentURI>xsi://feb</CurrentURI></u:SetAVTransportURI></s:Body>' + 
-		'</s:Envelope>'
+			return 	'<?xml version="1.0" encoding="utf-8"?>' +
+					'<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">' + 
+    				'<s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-nds-com:service:SkyPlay:2"><InstanceID>0</InstanceID><CurrentURI>xsi://feb</CurrentURI></u:SetAVTransportURI></s:Body>' + 
+					'</s:Envelope>'
 
 				// return '<?xml version="1.0" encoding="utf-8"?>' + 
 				// 			'<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body>' + 
