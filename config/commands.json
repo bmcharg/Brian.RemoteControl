@@ -4,9 +4,12 @@
       "device": {
 	      "ip":						"192.168.0.115",
     	  "port":					23
+
       },
 
       "commands": {
+
+
 
       	  "on":						"PO",
       	  "off":					"PF",
@@ -37,6 +40,12 @@
       	"volume": 					"?V"
 
       }
+
+    },
+
+    "tv": {
+
+    	"TODO":						"http://support.betaalbare-domotica.eu/creating-a-remote-control-for-samsung-smart-tv/"
 
     },
 

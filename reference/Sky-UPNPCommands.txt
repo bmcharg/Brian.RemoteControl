@@ -1,0 +1,496 @@
+Host name:         192.168.0.113:49153
+UPNP XML File:     http://192.168.0.113:49153/description0.xml
+
+
+Device information:
+	Device Name: SkyControl
+		Service Name: SkyCM
+			controlURL: /444D5276-3247-536B-7943-0019fbb4317eSkyCM
+			eventSubURL: /444D5276-3247-536B-7943-0019fbb4317eSkyCM
+			serviceId: urn:nds-com:serviceId:SkyCM
+			SCPDURL: /player_cm.xml
+			fullName: urn:schemas-nds-com:service:SkyCM:2
+			ServiceActions:
+				GetProtocolInfo
+					Source 
+						SourceProtocolInfo:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					Sink 
+						SinkProtocolInfo:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				GetCurrentConnectionIDs
+					ConnectionIDs 
+						CurrentConnectionIDs:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				GetCurrentConnectionInfo
+					Status 
+						A_ARG_TYPE_ConnectionStatus:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['OK', 'ContentFormatMismatch', 'InsufficientBandwidth', 'UnreliableChannel']
+						direction: out
+					Direction 
+						A_ARG_TYPE_Direction:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['Input', 'Output']
+						direction: out
+					PeerConnectionID 
+						A_ARG_TYPE_ConnectionID:
+							dataType: i4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RcsID 
+						A_ARG_TYPE_RcsID:
+							dataType: i4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					AVTransportID 
+						A_ARG_TYPE_AVTransportID:
+							dataType: i4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					ConnectionID 
+						A_ARG_TYPE_ConnectionID:
+							dataType: i4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					PeerConnectionManager 
+						A_ARG_TYPE_ConnectionManager:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					ProtocolInfo 
+						A_ARG_TYPE_ProtocolInfo:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+		Service Name: SkyRC
+			controlURL: /444D5276-3247-536B-7943-0019fbb4317eSkyRC
+			eventSubURL: /444D5276-3247-536B-7943-0019fbb4317eSkyRC
+			serviceId: urn:nds-com:serviceId:SkyRC
+			SCPDURL: /player_rc.xml
+			fullName: urn:schemas-nds-com:service:SkyRC:2
+			ServiceActions:
+				SelectPreset
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					PresetName 
+						A_ARG_TYPE_PresetName:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['FactoryDefaults', 'InstallationDefaults']
+						direction: in
+				ListPresets
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					CurrentPresetNameList 
+						PresetNameList:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+		Service Name: SkyPlay
+			controlURL: /444D5276-3247-536B-7943-0019fbb4317eSkyPlay
+			eventSubURL: /444D5276-3247-536B-7943-0019fbb4317eSkyPlay
+			serviceId: urn:nds-com:serviceId:SkyPlay
+			SCPDURL: /player_avt.xml
+			fullName: urn:schemas-nds-com:service:SkyPlay:2
+			ServiceActions:
+				GetMediaInfo_Ext
+					NextURI 
+						NextAVTransportURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					CurrentType 
+						CurrentMediaCategory:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['NO_MEDIA', 'TRACK_AWARE', 'TRACK_UNAWARE']
+						direction: out
+					CurrentURI 
+						AVTransportURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					NextURIMetaData 
+						NextAVTransportURIMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RecordMedium 
+						RecordStorageMedium:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['UNKNOWN', 'DV', 'MINI-DV', 'VHS', 'W-VHS', 'S-VHS', 'D-VHS', 'VHSC', 'VIDEO8', 'HI8', 'CD-ROM', 'CD-DA', 'CD-R', 'CD-RW', 'VIDEO-CD', 'SACD', 'MD-AUDIO', 'MD-PICTURE', 'DVD-ROM', 'DVD-VIDEO', 'DVD-R', 'DVD+RW', 'DVD-RW', 'DVD-RAM', 'DVD-AUDIO', 'DAT', 'LD', 'HDD', 'MICRO-MV', 'NETWORK', 'NONE', 'NOT_IMPLEMENTED', 'SD', 'PC-CARD', 'MMC', 'CF', 'BD', 'MS', 'HD_DVD']
+						direction: out
+					PlayMedium 
+						PlaybackStorageMedium:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['UNKNOWN', 'DV', 'MINI-DV', 'VHS', 'W-VHS', 'S-VHS', 'D-VHS', 'VHSC', 'VIDEO8', 'HI8', 'CD-ROM', 'CD-DA', 'CD-R', 'CD-RW', 'VIDEO-CD', 'SACD', 'MD-AUDIO', 'MD-PICTURE', 'DVD-ROM', 'DVD-VIDEO', 'DVD-R', 'DVD+RW', 'DVD-RW', 'DVD-RAM', 'DVD-AUDIO', 'DAT', 'LD', 'HDD', 'MICRO-MV', 'NETWORK', 'NONE', 'NOT_IMPLEMENTED', 'SD', 'PC-CARD', 'MMC', 'CF', 'BD', 'MS', 'HD_DVD']
+						direction: out
+					NrTracks 
+						NumberOfTracks:
+							dataType: ui4
+							allowedValueRange: ['0', '1']
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					WriteStatus 
+						RecordMediumWriteStatus:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['WRITABLE', 'PROTECTED', 'NOT_WRITABLE', 'UNKNOWN', 'NOT_IMPLEMENTED']
+						direction: out
+					MediaDuration 
+						CurrentMediaDuration:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					CurrentURIMetaData 
+						AVTransportURIMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				X_NDS_SetUserPIN
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					UserPIN 
+						X_NDS_ARG_TYPE_UserPIN:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+				Play
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					Speed 
+						TransportPlaySpeed:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['1', '-30', '-12', '-6', '-2', '1/2', '2', '6', '12', '30']
+						direction: in
+				Pause
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+				GetPositionInfo
+					AbsTime 
+						AbsoluteTimePosition:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					TrackDuration 
+						CurrentTrackDuration:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					TrackURI 
+						CurrentTrackURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					AbsCount 
+						AbsoluteCounterPosition:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					Track 
+						CurrentTrack:
+							dataType: ui4
+							allowedValueRange: ['0', '1']
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					TrackMetaData 
+						CurrentTrackMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RelCount 
+						RelativeCounterPosition:
+							dataType: i4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RelTime 
+						RelativeTimePosition:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				GetMediaInfo
+					NextURI 
+						NextAVTransportURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					CurrentURI 
+						AVTransportURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					NextURIMetaData 
+						NextAVTransportURIMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RecordMedium 
+						RecordStorageMedium:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['UNKNOWN', 'DV', 'MINI-DV', 'VHS', 'W-VHS', 'S-VHS', 'D-VHS', 'VHSC', 'VIDEO8', 'HI8', 'CD-ROM', 'CD-DA', 'CD-R', 'CD-RW', 'VIDEO-CD', 'SACD', 'MD-AUDIO', 'MD-PICTURE', 'DVD-ROM', 'DVD-VIDEO', 'DVD-R', 'DVD+RW', 'DVD-RW', 'DVD-RAM', 'DVD-AUDIO', 'DAT', 'LD', 'HDD', 'MICRO-MV', 'NETWORK', 'NONE', 'NOT_IMPLEMENTED', 'SD', 'PC-CARD', 'MMC', 'CF', 'BD', 'MS', 'HD_DVD']
+						direction: out
+					PlayMedium 
+						PlaybackStorageMedium:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['UNKNOWN', 'DV', 'MINI-DV', 'VHS', 'W-VHS', 'S-VHS', 'D-VHS', 'VHSC', 'VIDEO8', 'HI8', 'CD-ROM', 'CD-DA', 'CD-R', 'CD-RW', 'VIDEO-CD', 'SACD', 'MD-AUDIO', 'MD-PICTURE', 'DVD-ROM', 'DVD-VIDEO', 'DVD-R', 'DVD+RW', 'DVD-RW', 'DVD-RAM', 'DVD-AUDIO', 'DAT', 'LD', 'HDD', 'MICRO-MV', 'NETWORK', 'NONE', 'NOT_IMPLEMENTED', 'SD', 'PC-CARD', 'MMC', 'CF', 'BD', 'MS', 'HD_DVD']
+						direction: out
+					NrTracks 
+						NumberOfTracks:
+							dataType: ui4
+							allowedValueRange: ['0', '1']
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					WriteStatus 
+						RecordMediumWriteStatus:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['WRITABLE', 'PROTECTED', 'NOT_WRITABLE', 'UNKNOWN', 'NOT_IMPLEMENTED']
+						direction: out
+					MediaDuration 
+						CurrentMediaDuration:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					CurrentURIMetaData 
+						AVTransportURIMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				GetTransportInfo
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					CurrentTransportState 
+						TransportState:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['STOPPED', 'PAUSED_PLAYBACK', 'PAUSED_RECORDING', 'PLAYING', 'RECORDING', 'TRANSITIONING', 'NO_MEDIA_PRESENT']
+						direction: out
+					CurrentTransportStatus 
+						TransportStatus:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['OK', 'ERROR_OCCURRED']
+						direction: out
+					CurrentSpeed 
+						TransportPlaySpeed:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['1', '-30', '-12', '-6', '-2', '1/2', '2', '6', '12', '30']
+						direction: out
+				Stop
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+				GetDeviceCapabilities
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					RecQualityModes 
+						PossibleRecordQualityModes:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					RecMedia 
+						PossibleRecordStorageMedia:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+					PlayMedia 
+						PossiblePlaybackStorageMedia:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				Next
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+				X_NDS_GetCACondition
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					CACondition 
+						X_NDS_CACondition:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				SetAVTransportURI
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					CurrentURIMetaData 
+						AVTransportURIMetaData:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					CurrentURI 
+						AVTransportURI:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+				GetTransportSettings
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					RecQualityMode 
+						CurrentRecordQualityMode:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['0:EP', '1:LP', '2:SP', '0:BASIC', '1:MEDIUM', '2:HIGH', 'NOT_IMPLEMENTED']
+						direction: out
+					PlayMode 
+						CurrentPlayMode:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['NORMAL', 'SHUFFLE', 'REPEAT_ONE', 'REPEAT_ALL', 'RANDOM', 'DIRECT_1', 'INTRO']
+						direction: out
+				Seek
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					Target 
+						A_ARG_TYPE_SeekTarget:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					Unit 
+						A_ARG_TYPE_SeekMode:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: ['ABS_TIME', 'REL_TIME', 'ABS_COUNT', 'REL_COUNT', 'TRACK_NR', 'CHANNEL_FREQ', 'TAPE-INDEX', 'FRAME']
+						direction: in
+				GetCurrentTransportActions
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+					Actions 
+						CurrentTransportActions:
+							dataType: string
+							sendEvents: N/A
+							allowedValueList: []
+						direction: out
+				Previous
+					InstanceID 
+						A_ARG_TYPE_InstanceID:
+							dataType: ui4
+							sendEvents: N/A
+							allowedValueList: []
+						direction: in
+

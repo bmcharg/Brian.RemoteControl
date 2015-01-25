@@ -1,0 +1,83 @@
+Scraped from https://github.com/lgladdy/SkyRemote
+
+====================================
+PAUSE 
+====================================
+
+POST /444D5276-3247-536B-7943-0019fbb4317eSkyPlay HTTP/1.1
+Content-Length: 285
+SOAPACTION: "urn:schemas-nds-com:service:SkyPlay2:2#Pause"
+connection: close
+User-Agent: SKY_skyplus
+Host: 192.168.0.113
+Content-Type: text/xml; charset="utf-8"
+
+<?xml version="1.0" encoding="utf-8"?><s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><u:Pause xmlns:u="urn:schemas-nds-com:service:SkyPlay:2"><InstanceID>0</InstanceID></u:Pause></s:Body></s:Envelope>
+
+====================================
+PLAY
+====================================
+
+POST /444D5276-3247-536B-7943-0019fbb4317eSkyPlay HTTP/1.1
+Content-Length: 299
+SOAPACTION: "urn:schemas-nds-com:service:SkyPlay2:2#Play"
+connection: close
+User-Agent: SKY_skyplus
+Host: 192.168.0.113
+Content-Type: text/xml; charset="utf-8"
+
+<?xml version="1.0" encoding="utf-8"?><s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><u:Play xmlns:u="urn:schemas-nds-com:service:SkyPlay:2"><InstanceID>0</InstanceID><Speed>1</Speed></u:Play></s:Body></s:Envelope>
+
+==
+WATCH A RECORDING
+===
+
+POST /444D5276-3247-536B-7943-0019fbb4317eSkyPlay HTTP/1.1
+Host	192.168.0.113:49153
+Accept	*/*
+Accept-Encoding	gzip, deflate
+Accept-Language	en-gb
+Content-Type	text/xml; charset=utf-8
+Content-Length	510
+SOAPACTION	"urn:schemas-nds-com:service:SkyPlay:2#SetAVTransportURI"
+Connection	keep-alive
+User-Agent	SKY_skyplus
+
+<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"> 
+	<s:Body> 
+		<u:SetAVTransportURI xmlns:u="urn:schemas-nds-com:service:SkyPlay:2"> 
+			<InstanceID>0</InstanceID> 
+			<CurrentURI>file://pvr/29005F36?position=0&amp;speed=1</CurrentURI> 
+			<CurrentURIMetaData>NOT_IMPLEMENTED</CurrentURIMetaData> 
+		</u:SetAVTransportURI> 
+	</s:Body> 
+</s:Envelope>
+
+===
+GET UPDATE DATA?
+===
+POST /444D5376-3247-536B-7953-0019fbb4317eSkyBrowse HTTP/1.1
+Host	192.168.0.113:49153
+Accept	*/*
+Accept-Encoding	gzip, deflate
+Accept-Language	en-gb
+Content-Type	text/xml; charset=utf-8
+Content-Length	505
+SOAPACTION	"urn:schemas-nds-com:service:SkyBrowse:2#X_NDS_GetUpdateData"
+Connection	keep-alive
+User-Agent	SKY_skyplus
+
+<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"> 
+	<s:Body> 
+		<u:X_NDS_GetUpdateData xmlns:u="urn:schemas-nds-com:service:SkyBrowse:2"> 
+			<ContainerID>3</ContainerID> 
+			<ReqUpdateID>114</ReqUpdateID> 
+			<StartingIndex>0</StartingIndex> 
+			<RequestedCount>0</RequestedCount> 
+		</u:X_NDS_GetUpdateData> 
+	</s:Body> 
+</s:Envelope>
+
+
+
+
