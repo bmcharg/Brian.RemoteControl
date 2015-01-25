@@ -25,27 +25,25 @@ var server = app.listen(3000, function () {
 	process.stdout.write('\033c');
 
 	// Output server information to the console for reference
-	console.log("################################################################################");
-	console.log("");	
-	console.log(colors.green("   " + packageJSON.name + " :: Version " + packageJSON.version + ""));
-	console.log(colors.grey("   " + packageJSON.repository.url));
-	console.log("");	
-	console.log("   Server started at " + new Date().toLocaleString());
-	console.log("   Configuration: " + process.env.NODE_ENV);
-	console.log("   Server IP Address: " + host);
-	console.log("   Listening on port: " + port);
+	console.info("################################################################################");
+	console.info("");	
+	console.info(colors.green("   " + packageJSON.name + " :: Version " + packageJSON.version + ""));
+	console.info(colors.grey("   " + packageJSON.repository.url));
+	console.info("");	
+	console.info("   Server started at " + new Date().toLocaleString());
+	console.info("   Configuration: " + process.env.NODE_ENV);
+	console.info("   Server IP Address: " + host);
+	console.info("   Listening on port: " + port);
 	if (process.env.NODE_ENV == "production"){
-		console.log("");	
-		console.log(colors.red("   RUNNING IN PRODUCTION MODE"));	
+		console.info("");	
+		console.info(colors.red("   RUNNING IN PRODUCTION MODE"));	
 	}
-	console.log("");	
-//	console.log(colors.green("   Server available at " + config.SERVER_URL + ":" + config.SERVER_PORT));
-	console.log("");	
-	console.log("");	
-	console.log("################################################################################");
-	console.log("");	
+	console.info("");	
+	console.info("");	
+	console.info("################################################################################");
+	console.info("");	
 
-	console.log("");	
+	console.info("");	
 
 
 })

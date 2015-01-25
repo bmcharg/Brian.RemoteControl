@@ -8,23 +8,33 @@
 
       "commands": {
 
+      	  "on":						"PO",
+      	  "off":					"PF",
+
 	      "mute":            		"MO",
 	      "unmute":            		"MF",
 	      "xbox360": 				"25FN",
-	      "appletv":				"04FN",
+	      "appleTV":				"04FN",
 	      "tv":						"05FN",
-	      "xboxone":				"15FN",
+	      "xboxOne":				"15FN",
 	      "ps4":					"10FN",
 	      "hdmi5":					"23FN",
 	      "sonos":					"01FN",
 	      "radio":					"26FN",
-	      "ipod":					"17FN",
+	      "iPod":					"17FN",
 	      "phono":					"00FN",
-	      "xbmc":					"24FN",
+	      "kodi":					"24FN",
 	      "sky":					"06FN",
 
 	      "whatinput":				"?f"
 
+      },
+
+      "requests": {
+
+      	"power":					"?P",
+      	"input":					"?F",
+      	"volume": 					"?V"
 
       }
 

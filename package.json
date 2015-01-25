@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/chunkgroup/Chunk.SpotAPI.git"
+    "url": "git://github.com/bmcharg/Brian.RemoteControl.git"
   },
   "author": "Brian McHarg",
   "license": "ISC"
